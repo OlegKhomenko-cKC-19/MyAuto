@@ -1,0 +1,282 @@
+<resources>
+    <string name="app_name">Моє Авто</string>
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
+    <string name="failure_msg">Перевірте введені дані або інтернет з\'єднання</string>
+    <string name="data_saved_locally">Дані збережені локально</string>
+    <string name="register_failure_msg">Такий користувач існує або неправильний пароль</string>
+    <string name="loading">Завантаження…\nЗачекайте, будь ласка</string>
+
+    <!-- INSURANCES -->
+    <string name="osce_name">ОСЦПВ (Автоцивілка)</string>
+    <string name="osce_name_short">ОСЦПВ</string>
+    <string name="osce_details">обов\'язковий страховий поліс автоцивільної відповідальності</string>
+    <string name="casco_name">Каско</string>
+    <string name="casco_details">добровільний страховий поліс із покриттям відновлювальних робіт</string>
+
+    <!-- LOGIN -->
+    <string name="login_title">Вхід у систему</string>
+    <string name="username">Логін</string>
+    <string name="login_username_hint">Введіть ваш логін</string>
+    <string name="password">Пароль</string>
+    <string name="login_password_hint">Введіть ваш пароль</string>
+    <string name="login_no_account">Немає аккаунту?</string>
+    <string name="login">Увійти</string>
+
+    <!-- REGISTER -->
+    <string name="register_title">Реєстрація в системі</string>
+    <string name="register">Зареєструватися</string>
+    <string name="register_password_repeat">Повторіть пароль</string>
+    <string name="register_username_hint">Створіть ваш логін</string>
+    <string name="register_password_hint">Створіть ваш пароль</string>
+    <string name="register_repeat_password_hint">Повторіть ваш пароль</string>
+    <string name="register_have_account">Вже маєте аккаунт?</string>
+
+    <!-- PERSONAL DATA -->
+    <string name="personal_data_title">Персональні дані</string>
+    <string name="personal_data_first_name">Ім\'я</string>
+    <string name="personal_data_first_name_hint">Ваше ім\'я</string>
+    <string name="personal_data_last_name">Прізвище</string>
+    <string name="personal_data_last_name_hint">Ваше прізвище</string>
+    <string name="personal_data_save">Зберегти</string>
+
+    <!-- INSURANCE -->
+    <string name="my_insurance">Моє страхування</string>
+    <string name="insurance_issued_at">Оформлено: %s</string>
+    <string name="insurance_expired_at">Дійсний до: %s</string>
+    <string name="insurance_price_placeholder">%.1f грн</string>
+    <string name="insurance_number_placeholder">#%s-%05d</string>
+    <string name="insurance_add">Оформити поліс</string>
+    <string name="insurances_title">Мої поліси</string>
+    <string name="insurance_details_title">Деталі полісу</string>
+    <string name="insurance_pay">Сплатити</string>
+    <string name="insurance_history">Історія заявок:</string>
+    <string name="insurance_no_history">Заявок поки немає. Натисніть на кнопку і створіть першу заявку.</string>
+
+    <!-- NEW INSURANCE -->
+    <string name="new_insurance_title">Новий поліс</string>
+    <string name="new_insurance_description">Оформлення нового полісу</string>
+    <string name="new_insurance_car_number">Номер авто</string>
+    <string name="new_insurance_car_number_hint">АА0000АА</string>
+    <string name="new_insurance_type">Тип страхування</string>
+    <string name="new_insurance_exists_msg">Поліс на дане авто вже існує</string>
+    <string name="new_insurance_engine_volume_hint">Об\'єм двигуна, куб. см.</string>
+    <string name="new_insurance_car_type">Оберіть тип транспортного засобу:</string>
+    <string name="new_insurance_type_car">Легковий автомобіль</string>
+    <string name="new_insurance_type_truck">Вантажний автомобіль</string>
+    <string name="new_insurance_type_moto">Мотоцикл</string>
+    <string name="new_insurance_type_bus">Автобус</string>
+    <string name="new_insurance_page_title">Оформлення нового полісу %s</string>
+    <string name="new_insurance_engine_volume">Об\'єм двигуна, куб. см.</string>
+    <string name="new_insurance_fuel_type">Оберіть тип палива:</string>
+    <string name="new_insurance_fuel_type_gasoline">Бензин</string>
+    <string name="new_insurance_fuel_type_diesel">Дизель</string>
+    <string name="new_insurance_fuel_type_electricity">Електро</string>
+    <string name="new_insurance_distance">Пробіг, тис. км</string>
+    <string name="new_insurance_distance_hint">0</string>
+    <string name="new_insurance_car_price">Вартіть транспортного засобу, $</string>
+    <string name="new_insurance_car_price_hint">0</string>
+    <string name="new_insurance_period_type">Оберіть період на страхування:</string>
+    <string name="new_insurance_period_type_week">Тиждень</string>
+    <string name="new_insurance_period_type_month">Місяць</string>
+    <string name="new_insurance_period_type_year">Рік</string>
+    <string name="new_insurance_period_type_custom">Свій варіант</string>
+    <string name="new_insurance_expire_date">Поліс буде дісйний до %s</string>
+    <string name="new_insurance_dialog_text">Оформити страхування (%s) на транспортний засіб із номером %s, дійсне до %s, вартістю %.2f грн?</string>
+
+    <!-- INSURANCE PAYMENT -->
+    <string name="insurance_payment_required">Термін оплати спливає. Оплатіть страхування або воно буде автоматично видалене по закінченню терміну.</string>
+    <string name="insurance_payment_details">Оплата полісу #%s-%05d…\nВартість: %.2f грн</string>
+    <string name="insurance_payment_success">Оплата успішна, дякуємо!</string>
+    <string name="insurance_payment_pay">Сплатити</string>
+
+    <!-- INSURANCE REPORT -->
+    <string name="new_insurance_report_title">Нова заявка</string>
+    <string name="new_insurance_report_status">Оберіть ваш статус:</string>
+    <string name="new_insurance_report_status_physical">Фізична особа</string>
+    <string name="new_insurance_report_status_legal">Юридична особа</string>
+    <string name="new_insurance_report_email">Ваш E-Mail:</string>
+    <string name="new_insurance_report_email_hint">email@example.com</string>
+    <string name="new_insurance_report_registration">Ваша адреса реєстрації:</string>
+    <string name="new_insurance_report_place">Ваша адреса фактичного проживання:</string>
+    <string name="new_insurance_report_place_hint">Наприклад, вул. Хрещатик, 150</string>
+    <string name="new_insurance_report_registration_equals_place">Фактична адреса співпадає із адресою реєстрації</string>
+    <string name="new_insurance_report_phone_number">Телефон:</string>
+    <string name="new_insurance_report_phone_number_hint">+380000000000</string>
+    <string name="new_insurance_report_risk_type">Оберіть ризик страхового випадку:</string>
+    <string name="new_insurance_report_risk_type_crash">ДТП</string>
+    <string name="new_insurance_report_risk_type_pdto">ПДТО</string>
+    <string name="new_insurance_report_risk_type_disaster">Стихійне лихо</string>
+    <string name="new_insurance_report_risk_type_items_or_animals">Падіння предметів, напад тварин</string>
+    <string name="new_insurance_report_date_time">Дата і час події:</string>
+    <string name="new_insurance_report_body_number">Номер кузова</string>
+    <string name="new_insurance_report_body_number_hint">AAAAA0000000000</string>
+    <string name="new_insurance_report_insurance_number">Номер договору автострахування:</string>
+    <string name="new_insurance_report_crash_place">Місце події</string>
+    <string name="new_insurance_report_crash_place_hint">Опишіть місце, де сталася подія</string>
+    <string name="new_insurance_report_crash_details">Обставини події</string>
+    <string name="new_insurance_report_crash_details_hint">Опишіть обставини, за яких сталася подія</string>
+    <string name="new_insurance_did_asked_organs">Чи звертались ви до компетентних органів із метою оформлення події?</string>
+    <string name="new_insurance_report_did_asked_yes">Так</string>
+    <string name="new_insurance_report_did_asked_no_protocol">Ні, учасники ДПТ склали Європротокол</string>
+    <string name="new_insurance_report_did_asked_no_contract">Ні, не звертався за умовами Договору</string>
+    <string name="new_insurance_report_did_asked_no_glass">Ні, пошкоджено лише Скло</string>
+    <string name="new_insurance_report_who_control_car">Хто керував застрахованим ТЗ під час ДТП?</string>
+    <string name="new_insurance_report_control_parked">ТЗ був припаркований</string>
+    <string name="new_insurance_report_control_person">ТЗ керував водій</string>
+    <string name="new_insurance_report_damage">Які пошкодження отримав застрахований ТЗ?</string>
+    <string name="new_insurance_report_damage_hint">Розбитий бампер</string>
+    <string name="new_insurance_report_address">Адреса місцезнаходження пошкодженого ТЗ:</string>
+    <string name="new_insurance_report_address_hint">Наприклад, вул. Хрещатик, 200</string>
+    <string name="new_insurance_report_cars_amount">Зазначте кількість інших учасників ДТП окрім Вашого ТЗ:</string>
+    <string name="new_insurance_report_cars_amount_hint">0</string>
+    <string name="new_insurance_report_crash_has_victims">Чи є потерпілі життю чи здоров\'ю яких завдано шкоду?</string>
+    <string name="new_insurance_report_crash_guilty">В настанні ДТП винним вважаю:</string>
+    <string name="new_insurance_report_crash_guilty_hint">Наприклад, себе</string>
+    <string name="new_insurance_report_crash_guilty_details">тому що:</string>
+    <string name="new_insurance_report_crash_guilty_details_hint">Наприклад, не впорався із керуванням</string>
+    <string name="new_insurance_report_was_fixed">На місці ДТП здійснювалась фото, відео зйомка?</string>
+    <string name="new_insurance_report_compensation_type">Страхове відшкодування прошу виплатити згідно рішення шляхом</string>
+    <string name="new_insurance_report_compensation_type_fix">Перерахування на рахунок СТО для здійснення ремонту</string>
+    <string name="new_insurance_report_compensation_type_bank_account">На особистий рахунок Страхувальника / вигодонабувача (фіз.особа) розрахувавши збитки за допомогою ПЗ Аудатекс</string>
+    <string name="new_insurance_report_compensation_type_other">Спосіб буде вказано пізніше (Обравши цей варіант, мене повідомлено про необхідність подання додаткової письмової заяви, щодо способу виплати страхового відшкодування)</string>
+    <string name="new_insurance_report_send">Надіслати заявку</string>
+    <string name="insurance_report_details_title">Деталі заявки</string>
+    <string name="insurance_report_number">Заявка #%07d</string>
+    <string name="insurance_report_short_details">%s, %s</string>
+    <string name="insurance_report_details_places">Адреса реєстрації:\n%s\n\nАдреса проживання:\n%s</string>
+    <string name="insurance_report_details_transport_title">Транспортний засіб</string>
+    <string name="insurance_report_details_damage_title">Пошкодження ТЗ</string>
+    <string name="insurance_report_details_address_title">Адреса пошкодженого ТЗ</string>
+    <string name="insurance_report_crash_details_title">Деталі ДТП</string>
+    <string name="insurance_report_crash_cars_amount_title">Кількість інших учасників ДТП</string>
+    <string name="insurance_report_guilty_placeholders">В настанні ДТП винним вважається %s, тому що %s</string>
+
+    <!-- INSURANCE HELP -->
+    <string name="insurance_help_title">Страхові випадки</string>
+    <string-array name="insurance_help_titles">
+        <item>ДТП за наявності інших учасників пригоди</item>
+        <item>ДТП за відсутності інших учасників пригоди</item>
+        <item>Викрадення (угон)</item>
+        <item>ПДТО (протиправні дії третіх осіб)</item>
+        <item>Пожежа/вибух</item>
+        <item>Стихійне лихо</item>
+        <item>Напад тварин, падіння предметів</item>
+        <item>Пошкодження виключно скляних деталей</item>
+        <item>Оформлення страхового випадку без документів компетентних органів</item>
+        <item>Випадок по КАСКО за кордоном</item>
+    </string-array>
+    <string-array name="insurance_help_details">
+        <item>– зверніться до патрульної поліції 102 або оформіть Європротокол.\n– здійсніть фотографування місця події та пошкоджених транспортних засобів.\n
+            – у випадках оформлення ДТП працівниками поліції, здійсніть фотографування складених ними документів: Схема ДТП (2 сторінки), Адмінпротокол, інше.;\n
+        – зафіксуйте дані інших учасників та свідків ДТП (прізвище, адресу проживання, контактний телефон). Визначте, чи застраховані автомобілі або відповідальність інших учасників ДТП та занотуйте дані про страхову компанію. Повідомте такі дані представнику страхової компанії;\n
+        – у разі ймовірності Вашої вини в ДТП (та, як наслідок, настання ризику за ОСЦПВ), повідомте іншим учасникам інформацію про себе, номер свого полісу та місцезнаходження страхової компанії. Але до прийняття судового рішення не визнавайте свою вину у скоєнні ДТП;\n
+        – не відмовляйтесь від майнових вимог до інших учасників події і не створюйте передумов, за яких здійснення права вимоги до винних осіб з боку страхової компанії стане неможливим.</item>
+        <item>– зверніться до патрульної поліції 102 або використайте право оформлення страхового випадку без документів компетентних органів\n– у випадках оформлення ДТП працівниками поліції, здійсніть фотографування складених ними документів: Схема ДТП (2 сторінки), Адмінпротокол, інше.\n
+        – здійсніть фотографування місця події та пошкодженого транспортного засобу</item>
+        <item>– зверніться до Національної поліції 102\n– здійсніть фотографування місця події</item>
+        <item>– зверніться до патрульної поліції 102 або використайте право оформлення страхового випадку без документів компетентних органів\n– здійсніть фотографування місця події та пошкодженого транспортного засобу</item>
+        <item>– зверніться до Державної служби України з надзвичайних ситуацій 101\n– здійсніть фотографування місця події та пошкодженого транспортного засобу</item>
+        <item>– зверніться до Державної служби України з надзвичайних ситуацій 101 або використайте право оформлення страхового випадку без документів компетентних органів\n– здійсніть фотографування місця події та пошкодженого транспортного засобу</item>
+        <item>– зверніться до Національної поліції 102\n– здійсніть фотографування місця події та пошкодженого транспортного засобу</item>
+        <item>Для оформлення страхового випадку зверніться до Страховика, надавати довідку компетентних органів Страховику не обов’язково при умові:\n\n– пошкоджені виключно скляні деталі застрахованого автомобіля (вітрове, заднє та бокове скло ТЗ, скло люку/ даху, скло фар і світлорозсіювачів ліхтарів, скло зовнішніх дзеркал, повторювачів поворотів)\n
+        – відсутні пошкодження інших деталей, вузлів, агрегатів застрахованого автомобіля, крім скла</item>
+        <item>Окрім випадків: Угон, Крадіжка, Пожежа, Вибух\n\nВи можете використати право не надавати Страховику документи компетентних органів за умови:\n\n– відсутності інших учасників події;\n– договором страхування передбачено Максимальний розмір страхового відшкодування без довідки компетентних органів;\n
+        – розмір збитку по страховому випадку не перевищує передбаченого договором Максимальної суми страхової виплати без довідки;\n\nУвага! Якщо є сумніви щодо обставин події, отриманих пошкоджень, розміру збитку, то Вам слід звернутися до компетентних органів, або виплату буде здійснено згідно з умовами договору страхування, в т.ч. в межах передбаченого Максимального розміру страхового відшкодування без довідки компетентних органів. Страховик здійснює виплату страхового відшкодування на таких умовах не більше 2-х разів протягом дії Договору.</item>
+        <item>У разі настання страхового випадку за кордоном, зокрема в країнах ЄС, за договором КАСКО діють ті ж самі умови, що і в межах України.\n\nДля фіксації страхового випадку за кордоном рекомендуємо:\n - Використайте всі можливі способи для отримання матеріалів, що підтвердять факт страхового випадку та розмір збитку внаслідок його настання, а саме: дані на підставі яких УСГ бути мати можливість визнати заявлену подію страховим випадком, встановити винуватця події, оцінити розмір збитку та здійснити виплату страхового відшкодування.\n\n
+            Поради:\n- Зателефонуйте на Контакт-центр УСГ за номером цілодобової підтримки\n0 800 500 349; 044 503 99 99\n- Викличте на місце події поліцію. Для країн ЄС діє єдиний номер телефону 112*\n*у разі ДТП з іншими учасниками без постраждалих осіб,  Вам можуть запропонувати оформити Європротокол. Використання бланку Європротокол спрощує фіксацію ДТП. Між тим для оформлення ДТП з використанням Європротоколу Ви маєте бути впевненні в правильності його заповнення та у відсутності непорозумінь між учасниками ДТП щодо встановлення винуватця події.\n\
+            - Зробіть фотографії та короткий відеозапис з місця події/ДТП, в т.ч: обставин, деталі щодо зіткнення (інший автомобіль/перешкода/будівля/дерево/яма/предмет/інше) та пошкодження автомобіля/автомобілів,\n- Зафіксуйте або зробиіть фотографії документів щодо даних інших учасників ДТП та/або свідків події (П.І.Б., контактні дані, державні номери автомобілів, посвідчення водія, свідоцтво про реєстрацію ТЗ, номери договорів/полісів страхування, назва страхової компанії)\n\n
+            - У разі оформлення події поліцією/іншим уповноваженим органом:\nОтримайте документ, що підтверджує настання страхового випадку за участю Вашого автомобіля. Це може бути копія протоколу місця події, складена представниками поліції.\nПереконайтесь у наявності та відповідності зазначених в отриманому документі даних, що пов’язані із настанням події.\nУ випадку ненадання представниками поліції/уповноваженими службами документів/копій документів, що підтверджують факт настання страхового випадку, отримайте від них інформацію щодо даних для звернення з приводу отримання необхідних документів.\n
+            По можливості зафіксуйте інформацію щодо самих поліцейських/представників уповноважених служб (Ім’я, Прізвище, звання, назва/номер служби/підрозділу), якими оформлюється подія.\n\n- У разі оформлення ДТП з використанням Європротоколу\n\nДотримуйтесь правил та вимог оформлення Повідомлення про ДТП, зокрема переконайтеся:\n- щодо наявності у всіх учасників ДТП діючого страхового полісу обов’язкового страхування (місцевої страхової компанії та/або полісу міжнародного зразка Зелена картка)\n- у зазначенні в оформленому Європротоклі всіх даних щодо інших учасників ДТП, в т.ч. інформації по страховому полісу місцевої страхової компанії іншого учасника та/або полісу міжнародного зразка Зелена карткa
+        </item>
+    </string-array>
+
+
+    <!-- CATEGORIES -->
+    <string name="category_fines">Штрафи</string>
+    <string name="category_news">Новини</string>
+    <string name="category_expenses">Витрати</string>
+    <string name="category_support">Допомога</string>
+    <string name="category_finalization">Довідка</string>
+
+    <!-- FINES -->
+    <string name="fines_title">Штрафи ПДР</string>
+
+    <!-- SUPPORT -->
+    <string name="support_choose_company">Оберіть страхову компанію:</string>
+    <string name="support_company_unika">УНІКА</string>
+    <string name="support_company_tas">ТАС</string>
+    <string name="support_company_knyazha">Княжа</string>
+    <string name="support_company_oranta">Оранта</string>
+    <string name="support_company_other">Інша</string>
+    <string name="support_your_question">Опишіть ваше питання чи проблему:</string>
+    <string name="support_your_question_hint">Наприклад, страхування не подовжилось</string>
+    <string name="support_your_email">Ваш E-Mail для оберненого зв\'язку:</string>
+    <string name="support_your_email_hint">abc@example.com</string>
+    <string name="support_send">Відправити</string>
+    <string name="support_sent_msg">Питання відправлене. Очікуйте відповіді на пошту</string>
+    <string name="support_reply_text_placeholder">
+        Вітаємо, <b>%s</b>!\n\n
+        Ми отримали ваше питання та вже готуємо відповідь на нього! Дякую, що звернулись до нас!\n
+        Текст вашого запитання:\n\n
+        "%s"
+    </string>
+
+    <!-- SETTINGS -->
+    <string name="settings_title">Налаштування</string>
+    <string name="settings_push_day_before_end">За скільки днів сповіщати про оплату страхування?</string>
+    <string name="settings_push_day_before_end_hint">1</string>
+    <string name="settings_save">Зберегти</string>
+    <string name="settings_sync">Синхронізація даних із сервером</string>
+    <string name="settings_saved_msg">Збережено</string>
+    <string name="settings_sync_details">Синхронізація необхідна для того, щоб зберігати всі дані у хмарі. Вона відбувається автоматично під час завантаження застосунку, проте можна додатково синхронізувати вручну для більшої достовірності збереження даних, особливо у регіонах із поганим інтернетом.</string>
+    <string name="settings_sync_btn">Синхронізувати</string>
+    <string name="settings_synced_msg">Дані синхронізовано</string>
+    <string name="settings_sync_no_internet">Неможливо синхронізувати, перевірте інтернет з\'єднання</string>
+    <string name="settings_logout">Вийти із аккаунту</string>
+
+    <!-- EXPENSES -->
+    <string name="expenses_title">Витрати</string>
+    <string name="expenses_operations">Операції</string>
+    <string name="expenses_period_placeholder">Витрати з %s по %s</string>
+    <string name="expenses_short_period_placeholder">%s - %s</string>
+    <string name="expenses_percent_placeholder">%.2f%%</string>
+    <string name="expenses_operations_amount_placeholder">%d операції (-й)</string>
+    <string name="expenses_new_title">Нова витрата</string>
+    <string name="expenses_new_input_title">Витрата</string>
+    <string name="expenses_new_input_hint">0</string>
+    <string name="expenses_new_uah">UAH</string>
+    <string name="expenses_new_note_title">Нотатка</string>
+    <string name="expenses_new_note_hint">Деталі витрати</string>
+    <string name="expenses_list_sum_placeholder">- %.2f₴</string>
+    <string name="expenses_create">Записати</string>
+    <string name="expenses_no_history">Витрат поки немає. Натисніть на кнопку і додайте першу операцію.</string>
+    <string name="expenses_details_no_history">Витрат немає.</string>
+    <string name="expenses_center_general_placeholder">За період\n%.2f₴</string>
+    <string name="expenses_center_category_placeholder">%s\n%.2f₴\n→</string>
+
+
+    <!-- EXPENSE CATEGORIES -->
+    <string name="expense_category_battery">АКБ</string>
+    <string name="expense_category_tires">Шини</string>
+    <string name="expense_category_oil">Олива</string>
+    <string name="expense_category_gas">Паливо</string>
+    <string name="expense_category_parking">Парковка</string>
+    <string name="expense_category_insurance">Страхування</string>
+    <string name="expense_category_engine_repair">Ремонт\nдвигуна</string>
+    <string name="expense_category_gear_repair">Ремонт\nходової</string>
+    <string name="expense_category_consumables">Розхідники</string>
+    <string name="expense_category_other">Інше</string>
+
+    <!-- PERIOD DIALOG -->
+    <string name="period_dialog_title">Оберіть необхідний вам період:</string>
+    <string name="period_custom">Свій діапазон</string>
+    <string name="period_week">Тиждень</string>
+    <string name="period_month">Місяць</string>
+    <string name="period_year">Рік</string>
+
+    <!-- NOTIFICATION -->
+    <string name="notification_channel_id">PUSH_CHANNEL</string>
+    <string name="notification_insurance_title">Необхідно поновити страхування</string>
+    <string name="notification_insurance_text_placeholder">Оплатіть страхування для авто %s, або воно автоматично видалиться через %d днів</string>
+</resources>

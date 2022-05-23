@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/new_insurance_input_toolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/new_insurance_input_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="@string/new_insurance_page_title"
+            android:textColor="@color/dark_violet"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/shape_small_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_container_cl" />
+
+        <LinearLayout
+            android:id="@+id/new_insurance_car_type_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/new_insurance_car_type"
+                android:textColor="@color/dark_violet_75"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/shape_edittext"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <RadioGroup
+                    android:id="@+id/new_insurance_car_type_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/new_insurance_car_type_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/dark_violet"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/new_insurance_type_car"
+                        android:textColor="@color/dark_violet" />
+
+                    <RadioButton
+                        android:id="@+id/new_insurance_truck_type_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/dark_violet"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/new_insurance_type_truck"
+                        android:textColor="@color/dark_violet" />
+
+                    <RadioButton
+                        android:id="@+id/new_insurance_moto_type_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/dark_violet"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/new_insurance_type_moto"
+                        android:textColor="@color/dark_violet" />
+
+                    <RadioButton
+                        android:id="@+id/new_insurance_bus_type_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/dark_violet"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/new_insurance_type_bus"
+                        android:textColor="@color/dark_violet" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/new_insurance_engine_volume_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/new_insurance_engine_volume"
+                android:textColor="@color/dark_violet_75"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/new_insurance_engine_volume_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/shape_edittext"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="@string/new_insurance_engine_volume_hint"
+                android:inputType="number"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_gray_violet"
+                android:textCursorDrawable="@drawable/shape_et_cursror"
+                tools:ignore="TextFields,TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/new_insurance_fuel_type_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/new_insurance_fuel_type"
+                android:textColor="@color/dark_violet_75"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/shape_edittext"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <RadioGroup
+                    android:id="@+id/new_insurance_fuel_type_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/new_insurance_fuel_type_gasoline_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/dark_violet"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/new_insurance_fuel_type_gasoline"
+                        android:textColor="@color/dark_violet" />
+
+                    <RadioButton
+                        android:id="@+id/new_insurance_fuel_type_diesel_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/dark_violet"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/new_insurance_fuel_type_diesel"
+                        android:textColor="@color/dark_violet" />
+
+                    <RadioButton
+                        android:id="@+id/new_insurance_fuel_type_electricity_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/dark_violet"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/new_insurance_fuel_type_electricity"
+                        android:textColor="@color/dark_violet" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/new_insurance_casco_input_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/new_insurance_distance_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/new_insurance_distance"
+                    android:textColor="@color/dark_violet_75"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/new_insurance_distance_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/shape_edittext"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/new_insurance_distance_hint"
+                    android:inputType="number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_gray_violet"
+                    android:textCursorDrawable="@drawable/shape_et_cursror"
+                    tools:ignore="TextFields,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/new_insurance_price_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/new_insurance_car_price"
+                    android:textColor="@color/dark_violet_75"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/new_insurance_price_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/shape_edittext"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/new_insurance_car_price_hint"
+                    android:inputType="number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_gray_violet"
+                    android:textCursorDrawable="@drawable/shape_et_cursror"
+                    tools:ignore="TextFields,TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_small_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_container_cl" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/new_insurance_period_type_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/new_insurance_period_type"
+                    android:textColor="@color/dark_violet_75"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/shape_edittext"
+                    android:orientation="vertical"
+                    android:paddingBottom="24dp">
+
+                    <RadioGroup
+                        android:id="@+id/new_insurance_period_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/new_insurance_period_type_week_rb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/dark_violet"
+                            android:checked="true"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/new_insurance_period_type_week"
+                            android:textColor="@color/dark_violet" />
+
+                        <RadioButton
+                            android:id="@+id/new_insurance_period_type_month_rb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:buttonTint="@color/dark_violet"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/new_insurance_period_type_month"
+                            android:textColor="@color/dark_violet" />
+
+                        <RadioButton
+                            android:id="@+id/new_insurance_period_type_year_rb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:buttonTint="@color/dark_violet"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/new_insurance_period_type_year"
+                            android:textColor="@color/dark_violet" />
+
+                        <RadioButton
+                            android:id="@+id/new_insurance_period_type_custom_rb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:buttonTint="@color/dark_violet"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/new_insurance_period_type_custom"
+                            android:textColor="@color/dark_violet" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/new_insurance_expire_date_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/new_insurance_expire_date"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/new_insurance_create_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="16dp"
+            android:background="@drawable/shape_button_default"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingVertical="16dp"
+            android:text="@string/insurance_add"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+</ScrollView>

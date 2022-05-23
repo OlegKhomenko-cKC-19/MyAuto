@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/support_toolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/support_company_selection_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/support_choose_company"
+                android:textColor="@color/dark_violet_75"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/shape_edittext"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <RadioGroup
+                    android:id="@+id/support_company_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/support_unika_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/dark_violet"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/support_company_unika"
+                        android:textColor="@color/dark_violet" />
+
+                    <RadioButton
+                        android:id="@+id/support_tas_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/dark_violet"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/support_company_tas"
+                        android:textColor="@color/dark_violet" />
+
+                    <RadioButton
+                        android:id="@+id/support_knyazha_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/dark_violet"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/support_company_knyazha"
+                        android:textColor="@color/dark_violet" />
+
+                    <RadioButton
+                        android:id="@+id/support_oranta_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/dark_violet"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/support_company_oranta"
+                        android:textColor="@color/dark_violet" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/support_email_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/support_your_email"
+                android:textColor="@color/dark_violet_75"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/support_email_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/shape_edittext"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/new_insurance_report_email_hint"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_gray_violet"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/support_question_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/support_your_question"
+                android:textColor="@color/dark_violet_75"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/support_question_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/shape_edittext"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:hint="@string/support_your_question_hint"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_gray_violet"
+                tools:ignore="TextFields,TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/support_send_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:background="@drawable/shape_button_default"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingVertical="16dp"
+            android:text="@string/support_send"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/insurance_report_toolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/shape_insurance_item_background">
+
+            <TextView
+                android:id="@+id/report_number_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/insurance_report_number"
+                android:textColor="@color/dark_violet"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/report_type_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_report_risk_type_crash"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/report_number_tv"
+                app:layout_constraintTop_toBottomOf="@+id/report_number_tv" />
+
+            <ImageView
+                android:id="@+id/report_person_iv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/ic_person"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/report_type_tv" />
+
+            <TextView
+                android:id="@+id/report_person_full_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/personal_data_first_name"
+                android:textColor="@color/dark_violet"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/report_person_phone_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/report_person_iv" />
+
+            <TextView
+                android:id="@+id/report_person_phone_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/new_insurance_report_phone_number_hint"
+                android:textColor="@color/dark_gray_violet"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/report_person_full_name_tv"
+                app:layout_constraintStart_toStartOf="@+id/report_person_full_name_tv"
+                app:layout_constraintTop_toBottomOf="@+id/report_person_full_name_tv" />
+
+            <TextView
+                android:id="@+id/report_person_email_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/new_insurance_report_email_hint"
+                android:textColor="@color/dark_gray_violet"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/report_person_phone_tv"
+                app:layout_constraintStart_toStartOf="@+id/report_person_phone_tv"
+                app:layout_constraintTop_toBottomOf="@+id/report_person_phone_tv" />
+
+            <TextView
+                android:id="@+id/report_person_registration_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:text="@string/insurance_report_details_places"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/report_person_email_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/insurance_report_details_transport_title"
+            android:textColor="@color/dark_gray_violet"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/report_person_phone_tv"
+            app:layout_constraintStart_toStartOf="@+id/report_person_phone_tv"
+            app:layout_constraintTop_toBottomOf="@+id/report_person_phone_tv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape_insurance_item_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/report_car_number_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/new_insurance_car_number"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/report_car_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_car_number_hint"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/report_car_number_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/report_car_number_title_tv" />
+
+
+            <TextView
+                android:id="@+id/report_car_body_number_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/new_insurance_report_body_number"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/report_car_number_tv" />
+
+
+            <TextView
+                android:id="@+id/report_car_body_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_report_body_number_hint"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/report_car_body_number_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/report_car_body_number_title_tv" />
+
+            <TextView
+                android:id="@+id/report_insurance_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/new_insurance_report_insurance_number"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/report_car_body_number_tv" />
+
+            <TextView
+                android:id="@+id/report_insurance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/insurance_number_placeholder"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/report_insurance_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/report_insurance_title_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/new_insurance_report_crash_details"
+            android:textColor="@color/dark_gray_violet"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/report_person_phone_tv"
+            app:layout_constraintStart_toStartOf="@+id/report_person_phone_tv"
+            app:layout_constraintTop_toBottomOf="@+id/report_person_phone_tv" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape_insurance_item_background"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/new_insurance_report_crash_place"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/report_place_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:drawableStart="@drawable/ic_place"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_report_place_hint"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/new_insurance_report_date_time"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/report_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_report_date_time"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/new_insurance_report_crash_details"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/report_details_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:drawableStart="@drawable/ic_text"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_report_crash_details_hint"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/insurance_report_details_damage_title"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/report_damage_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:drawableStart="@drawable/ic_car_crash"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_report_damage_hint"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/insurance_report_details_address_title"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/report_car_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:drawableStart="@drawable/ic_place"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_report_address_hint"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/new_insurance_report_who_control_car"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/report_control_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:drawableStart="@drawable/ic_car_crash"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_report_control_person"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="@string/new_insurance_did_asked_organs"
+                android:textColor="@color/dark_violet"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/report_organs_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_insurance_type_background"
+                android:drawableStart="@drawable/ic_police"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/new_insurance_report_did_asked_no_protocol"
+                android:textColor="@color/dark_violet"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/report_crash_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/insurance_report_crash_details_title"
+                android:textColor="@color/dark_gray_violet"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/report_person_phone_tv"
+                app:layout_constraintStart_toStartOf="@+id/report_person_phone_tv"
+                app:layout_constraintTop_toBottomOf="@+id/report_person_phone_tv" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_insurance_item_background"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/insurance_report_crash_cars_amount_title"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/report_crash_people_amount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_insurance_type_background"
+                    android:drawableStart="@drawable/ic_people"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/new_insurance_report_cars_amount_hint"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/new_insurance_report_crash_has_victims"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/report_has_victims_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_insurance_type_background"
+                    android:drawableStart="@drawable/ic_emergency"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/new_insurance_report_was_fixed"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/report_was_fixed_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_insurance_type_background"
+                    android:drawableStart="@drawable/ic_camera"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/new_insurance_report_compensation_type"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/report_compensation_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_insurance_type_background"
+                    android:drawableStart="@drawable/ic_money"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/new_insurance_report_compensation_type_other"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/report_guilty_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/insurance_report_guilty_placeholders"
+                    android:textColor="@color/dark_violet"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
